@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class PatternsController < ApplicationController
+class PatternsController < OpenReadController
   before_action :set_pattern, only: %i[show update destroy]
 
   # GET /patterns
@@ -17,7 +17,7 @@ class PatternsController < ApplicationController
 
   # POST /patterns
   def create
-    @pattern = Pattern.new(pattern_params)
+    @pattern = current_user.patterns.build(pattern_params)
 
     if @pattern.save
       render json: @pattern, status: :created
@@ -44,7 +44,7 @@ class PatternsController < ApplicationController
 
   # Use callbacks to share common setup or constraints between actions.
   def set_pattern
-    @pattern = Pattern.find(params[:id])
+    @pattern = current_user.patterns.find(params[:id])
   end
 
   # Only allow a trusted parameter "white list" through.
