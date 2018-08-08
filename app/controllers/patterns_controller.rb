@@ -12,7 +12,7 @@ class PatternsController < ApplicationController
 
   # GET /patterns/1
   def show
-    render json: @pattern
+    render json: Pattern.find(params[:id])
   end
 
   # POST /patterns
