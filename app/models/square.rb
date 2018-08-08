@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-class Pattern < ApplicationRecord
+class Square < ApplicationRecord
   belongs_to :user
-  has_many :squares
 end
