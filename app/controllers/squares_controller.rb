@@ -49,6 +49,6 @@ class SquaresController < ApplicationController
 
   # Only allow a trusted parameter "white list" through.
   def square_params
-    params.require(:square).permit(:on)
+    params.require(:square).permit(:on, :pattern_id)
   end
 end

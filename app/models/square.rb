@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 class Square < ApplicationRecord
-  belongs_to :user
+  belongs_to :pattern
 end

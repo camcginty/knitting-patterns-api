@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PatternSerializer < ActiveModel::Serializer
-  attributes :id, :title, :square0, :square1, :square2, :square3, :editable
+  attributes :id, :title, :editable
   belongs_to :user
   has_many :squares
 
