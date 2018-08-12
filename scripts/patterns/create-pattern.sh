@@ -7,7 +7,9 @@ curl "http://localhost:4741/patterns" \
   --header "Authorization: Token token=${TOKEN}" \
   --data '{
     "pattern": {
-      "title": "'"${TITLE}"'"
+      "title": "'"${TITLE}"'",
+      "x": "'"${X}"'",
+      "y": "'"${Y}"'"
     }
   }'
 

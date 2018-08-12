@@ -49,6 +49,6 @@ class PatternsController < OpenReadController
 
   # Only allow a trusted parameter "white list" through.
   def pattern_params
-    params.require(:pattern).permit(:title)
+    params.require(:pattern).permit(:title, :x, :y)
   end
 end
